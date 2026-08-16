@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#FF8A3D">
+  <title>סלסלה 🎶</title>
+</head>
+<body>
+<div class="shell" id="shell">
+
+  <!-- מסך בחירה: מי כאן? (פעם אחת לכל מכשיר) -->
+  <div class="onboard" id="onboard" hidden>
+    <div class="notes-bg" aria-hidden="true">
+      <span>🎶</span><span>🎵</span><span>🎶</span><span>🎵</span><span>🎶</span>
+    </div>
+    <div class="logo-mark" id="onboardLogo"></div>
+    <h2 class="logo-word">סלסלה</h2>
+    <div class="tag">רשימת הקניות המשותפת שלכם.<br>בזמן אמת, עם סלסולים 🎶</div>
+    <button class="pick s" data-pick="shmuel"><span class="dot">ש</span> אני שמואל 👋</button>
+    <button class="pick t" data-pick="talia"><span class="dot">ט</span> אני טליה 👋</button>
+    <div class="foot" id="onboardFoot">בוחרים פעם אחת, וזהו. הסלסלה תזכור.</div>
+    <div class="code-step" id="codeStep" hidden>
+      <div class="tag">עוד צעד קטן: קוד הבית שלכם 🔑<br>הוא נמצא בהודעה שקיבלתם עם הקישור.<br>מדביקים פעם אחת, והמכשיר מחובר לתמיד.</div>
+      <input class="notein" id="codeInput" placeholder="salsala-..." autocomplete="off">
+      <button class="btn-primary wide" id="codeGo">חיבור לבית 🎶</button>
+    </div>
+  </div>
+
+  <header>
+    <div class="brandrow">
+      <div class="brand"><span class="brand-mark" id="brandLogo"></span><span class="brand-word">סלסלה</span></div>
+      <button class="avatar" id="avatar" title="החלפת משתמש"></button>
+    </div>
+    <h1 class="greet" id="greet"></h1>
+    <div class="statusline" id="statusline"></div>
+  </header>
+
+  <div class="offline-bar" id="offlineBar" hidden></div>
+  <div class="live-banner" id="liveBanner" hidden></div>
+
+  <!-- מד מצב הבית -->
+  <div class="gauge" id="gauge" hidden>
+    <div class="gauge-label" id="gaugeLabel"></div>
+    <div class="gauge-track">
+      <div class="gauge-marker" id="gaugeMarker"></div>
+    </div>
+  </div>
+
+  <div class="seg">
+    <button id="segList" class="on">🧺 הרשימה</button>
+    <button id="segShop">🛒 בסופר</button>
+  </div>
+
+  <div class="progress" id="progress" hidden>
+    <div class="lbl"><span id="progText"></span><b id="progPct"></b></div>
+    <div class="track"><div class="fill" id="progFill"></div></div>
+  </div>
+
+  <main id="main">
+    <div class="empty" id="empty" hidden>
+      <div class="big" id="emptyEmoji">🧺</div>
+      <h3 id="emptyTitle"></h3>
+      <p id="emptyText"></p>
+      <div class="couple-line" id="coupleLine"></div>
+    </div>
+    <div id="list"></div>
+  </main>
+
+  <!-- שורת הוספה מהירה -->
+  <div class="addwrap">
+    <div class="chips" id="chips"></div>
+    <div class="addcard">
+      <button class="addbtn" id="addBtn" aria-label="הוספה">+</button>
+      <input id="addInput" type="text" autocomplete="off" enterkeyhint="done">
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><span id="toastMsg"></span><button class="undo" id="toastUndo" hidden>ביטול</button></div>
+
+  <!-- חגיגת סיום -->
+  <div class="party" id="party" hidden>
+    <div class="big">🎉</div>
+    <h2 id="partyTitle"></h2>
+    <p id="partySub"></p>
+    <div class="couple-line" id="partyLine"></div>
+    <button class="btn-primary" id="partyClear"></button>
+    <button class="btn-ghost" id="partyMore"></button>
+  </div>
+
+  <!-- גיליון פעולות על מוצר -->
+  <div class="scrim" id="scrim" hidden></div>
+  <div class="sheet" id="sheet">
+    <div class="sheet-grip"></div>
+    <h3 id="sheetName"></h3>
+    <div class="sheet-meta" id="sheetMeta"></div>
+    <div class="actions3" id="actions3"></div>
+    <label>הערה (כמות, מותג, אחוז שומן...)</label>
+    <input class="notein" id="sheetNote" placeholder="לדוגמה: 2 יחידות / 3% / של תנובה">
+    <label>קטגוריה</label>
+    <div class="catgrid" id="sheetCats"></div>
+    <button class="save" id="sheetSave">שמירה</button>
+  </div>
+
+  <!-- גיליון פרופיל קטן -->
+  <div class="sheet" id="profileSheet">
+    <div class="sheet-grip"></div>
+    <h3 id="profTitle"></h3>
+    <div class="sheet-meta" id="profMode"></div>
+    <button class="btn-primary wide" id="profSwitch"></button>
+    <button class="btn-ghost" id="profClose">סגירה</button>
+  </div>
+
+  <canvas class="confetti" id="confetti" hidden></canvas>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

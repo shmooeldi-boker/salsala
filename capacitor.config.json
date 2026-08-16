@@ -1,0 +1,8 @@
+{
+  "appId": "app.salsala.list",
+  "appName": "סלסלה",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": false
+  }
+}
